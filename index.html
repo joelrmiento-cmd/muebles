@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muebles de Madera</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* ======= Estilos Generales ======= */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #faf9f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Georgia', serif;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ======= Colores de la paleta ======= */
+    :root {
+      --color-primario: #5d4037;   /* Marrón madera */
+      --color-secundario: #8d6e63; /* Beige oscuro */
+      --color-acento: #d7ccc8;     /* Beige claro */
+      --color-fondo: #faf9f7;      /* Fondo general */
+      --color-claro: #ffffff;
+      --color-oscuro: #333333;
+      --color-resaltado: #c62828;  /* Rojo detalle */
+    }
+
+    /* ======= Barra de Navegación ======= */
+    nav {
+      background-color: var(--color-primario);
+      color: var(--color-claro);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: var(--color-claro);
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: var(--color-acento);
+    }
+
+    /* ======= Portada ======= */
+    .portada {
+      background: url('https://images.unsplash.com/photo-1616627980335-188d2ad5421d') no-repeat center center/cover;
+      color: var(--color-claro);
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .portada h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .portada button {
+      padding: 12px 25px;
+      background: var(--color-resaltado);
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: white;
+    }
+    .portada button:hover {
+      background: #a51c1c;
+    }
+
+    /* ======= Catálogo destacado ======= */
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .producto {
+      background: var(--color-claro);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .producto h3 {
+      margin: 10px 0;
+    }
+    .producto p {
+      color: var(--color-resaltado);
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--color-primario);
+      color: var(--color-claro);
+      border-radius: 20px;
+    }
+    .btn:hover {
+      background: var(--color-secundario);
+    }
+
+    /* ======= Categorías ======= */
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .categoria {
+      background: var(--color-claro);
+      flex: 1 1 200px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* ======= Testimonios ======= */
+    .testimonios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .testimonio {
+      background: var(--color-acento);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* ======= Pie de Página ======= */
+    footer {
+      background: var(--color-oscuro);
+      color: var(--color-claro);
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Barra de Navegación ===== -->
+  <nav>
+    <h1>Muebles de Madera</h1>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#nosotros">Sobre Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Portada ===== -->
+  <section id="inicio" class="portada">
+    <h2>Muebles para toda la vida</h2>
+    <p>Diseños artesanales, resistentes y únicos</p>
+    <button onclick="location.href='#catalogo'">Ver Catálogo</button>
+  </section>
+
+  <!-- ===== Catálogo destacado ===== -->
+  <section id="catalogo">
+    <h2>Catálogo Destacado del Mes</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1616627980343-6a8b9e0e6a0d" alt="Mesa de madera">
+        <h3>Mesa Clásica</h3>
+        <p>$450.000</p>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1582582428578-b7c9a1ab768c" alt="Silla de madera">
+        <h3>Silla Rústica</h3>
+        <p>$120.000</p>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1580476262794-7eec9d57c84c" alt="Estantería">
+        <h3>Estantería Moderna</h3>
+        <p>$600.000</p>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1622121664012-9f9f9a3b6e55" alt="Cama de madera">
+        <h3>Cama Matrimonial</h3>
+        <p>$1.200.000</p>
+      </div>
+    </div>
+    <a href="#catalogo" class="btn">Ver catálogo completo</a>
+  </section>
+
+  <!-- ===== Muebles para el hogar ===== -->
+  <section>
+    <h2>Muebles para el Hogar</h2>
+    <p>Contamos con mesas, sillas, camas, estanterías, sofás de madera, cómodas y escritorios. Diseñados con materiales de primera calidad y acabados artesanales.</p>
+  </section>
+
+  <!-- ===== Categorías ===== -->
+  <section>
+    <h2>Categorías</h2>
+    <div class="categorias">
+      <div class="categoria"><h3>Mesas</h3></div>
+      <div class="categoria"><h3>Sillas</h3></div>
+      <div class="categoria"><h3>Camas</h3></div>
+      <div class="categoria"><h3>Estanterías</h3></div>
+      <div class="categoria"><h3>Accesorios</h3></div>
+    </div>
+  </section>
+
+  <!-- ===== Sobre Nosotros ===== -->
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos un taller dedicado a la fabricación de muebles de madera artesanal. Nuestra filosofía se basa en el respeto al medio ambiente, utilizando materiales sostenibles y procesos responsables.</p>
+    <img src="https://images.unsplash.com/photo-1606813909365-8c802db9253b" alt="Taller de carpintería">
+  </section>
+
+  <!-- ===== Testimonios ===== -->
+  <section>
+    <h2>Opiniones de Clientes</h2>
+    <div class="testimonios">
+      <div class="testimonio">
+        <p>"Excelente calidad, mi mesa luce espectacular en el comedor." – Juan P.</p>
+      </div>
+      <div class="testimonio">
+        <p>"La cama es súper resistente y hermosa, recomiendo totalmente." – María L.</p>
+      </div>
+      <div class="testimonio">
+        <p>"El servicio fue rápido y el mueble llegó impecable." – Andrés R.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contacto ===== -->
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <p>📞 Teléfono: +57 320 123 4567</p>
+    <p>✉️ Correo: contacto@mueblesmadera.com</p>
+    <p>📍 Dirección: Calle 123 #45-67, Bogotá, Colombia</p>
+    <p>WhatsApp: +57 300 765 4321</p>
+    <p>Redes sociales: Facebook | Instagram | Twitter</p>
+  </footer>
+
+</body>
+</html>
